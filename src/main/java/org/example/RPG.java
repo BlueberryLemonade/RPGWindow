@@ -2,15 +2,14 @@ package org.example;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
 
-public class RPG extends JFrame implements ActionListener {
+public class RPG {
+    private JFrame boxArea;
     private Label entryGameText;
-    private Button play;
-    private Button quit;
-    private Button tools;
+    private JButton play;
+    private JButton quit;
+    private JButton tools;
 
     public static void main(String[] args) {
         RPG game = new RPG();
@@ -18,24 +17,48 @@ public class RPG extends JFrame implements ActionListener {
     }
 
     public RPG(){
-        //Create and add the GUI pieces
-        super("RPG Window");
 
-        setLayout(new FlowLayout());
+        boxArea = new JFrame("RPG Window");
+
+        //Create and add the GUI pieces
+
+
+        boxArea.setLayout(new FlowLayout());
         JPanel panel = new JPanel();
         JPanel buttonPanel = new JPanel();
 
         entryGameText = new Label("Welcome to the RPG Window");
 
-        play = new Button("Play Game");
-        quit = new Button("Quit");
-        tools = new Button("Dev Tools");
+        play = new JButton("Play");
+        quit = new JButton("Quit");
+        tools = new JButton("Dev Tools");
+
+        play.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Play Clicked");
+            }
+        });
+
+        quit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Quit Clicked");
+            }
+        });
+
+        tools.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Dev Tools Clicked");
+            }
+        });
+
 
         panel.add(entryGameText);
 
-        play.addActionListener(this);
-        quit.addActionListener(this);
-        tools.addActionListener(this);
+
 
         buttonPanel.add(play);
         buttonPanel.add(quit);
@@ -43,35 +66,14 @@ public class RPG extends JFrame implements ActionListener {
 
 
 
-        add(panel);
-        add(buttonPanel);
+        boxArea.add(panel);
+        boxArea.add(buttonPanel);
 
-        setSize(770,500);
-        setLocation(300,500);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setVisible(true);
+        boxArea.setSize(770,500);
+        boxArea.setLocation(300,500);
+        boxArea.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        boxArea.setVisible(true);
 
-    }
 
-    public void actionPerformed(ActionEvent action){
-
-        System.out.println(action.getSource());
-        if(action.getSource() == play ){
-            //TODO - write play command
-            System.out.println("Play Clicked");
-            Loader load = new Loader();
-            if(!load.usernameLoad()){
-                System.out.println("CREATE A NEW CHAMPION");
-                ChampCreate creator = new ChampCreate();
-
-            }
-
-        }
-        if(action.getSource() == quit){
-            dispose();
-            }
-        if(action.getSource() == tools){
-            //TODO - write dev tools command
-        }
     }
 }
