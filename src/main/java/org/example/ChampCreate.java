@@ -16,7 +16,7 @@ public class ChampCreate{
     private TextField nameField;
     private TextField strengthField;
 
-    private Button accept;
+
     private Button cancel;
 
     public ChampCreate(){
@@ -34,25 +34,15 @@ public class ChampCreate{
         nameField = new TextField(14);
         strengthField = new TextField(2);
         nameField.setMaximumSize(new Dimension(100,300));
-        accept = new Button("Accept");
+
         cancel = new Button("Cancel");
-        accept.addActionListener(new ActionListener() {
-                                     @Override
-                                     public void actionPerformed(ActionEvent e) {
-                                         if(!isNumberic(strengthField.getText())){
 
-                                         } else {
-                                             System.out.println("accepted");
-                                         }
-                                     }
-                                 });
-
-                //Adding elements to GUI
-                panel.add(nameLabel);
         panel.add(nameField);
         panel.add(strengthLabel);
         panel.add(strengthField);
-        panel.add(accept);
+        FrameBuilder builder = new FrameBuilder();
+        builder.addAButton("Accept", panel);
+
         panel.add(cancel);
 
         frame.add(panel);
@@ -65,7 +55,6 @@ public class ChampCreate{
     }
 
     private boolean isNumberic(String str){
-
         try {
             Integer.parseInt(str);
             return true;
@@ -73,6 +62,7 @@ public class ChampCreate{
             System.out.println("Must have a number in the strength field");
             return false;
         }
-
     }
+
+
 }
