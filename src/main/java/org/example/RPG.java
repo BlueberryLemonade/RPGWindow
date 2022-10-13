@@ -68,8 +68,8 @@ public class RPG extends JFrame implements ActionListener {
 
         }
         if(action.getSource() == quit){
-            dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
-        }
+            dispose();
+            }
         if(action.getSource() == tools){
             //TODO - write dev tools command
         }

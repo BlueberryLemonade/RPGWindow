@@ -17,28 +17,49 @@ public class ChampCreate extends JFrame implements ActionListener {
     private TextField strengthField;
 
     private Button accept;
+    private Button cancel;
 
     public ChampCreate(){
+
         //Creating the GUI
         super("Champion Creation");
         setSize(400,500);
         setLayout(new FlowLayout());
 
+        //Instantiating GUI elements
         nameLabel = new Label("Name: ");
         strengthLabel = new Label("Strength: ");
         nameField = new TextField(14);
         strengthField = new TextField(2);
         accept = new Button("Accept");
+        cancel = new Button("Cancel");
+        accept.addActionListener(this);
+        cancel.addActionListener(this);
 
+        //Adding elements to GUI
         add(nameLabel);
         add(nameField);
         add(strengthLabel);
         add(strengthField);
         add(accept);
+        add(cancel);
 
+        //Final GUI settings
         setLocation(400, 500);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setVisible(true);
+
+    }
+
+    private boolean isNumberic(String str){
+
+        try {
+            Integer.parseInt(str);
+            return true;
+        } catch(NumberFormatException nfe){
+            System.out.println("Must have a number in the strength field");
+            return false;
+        }
 
     }
 
@@ -47,8 +68,15 @@ public class ChampCreate extends JFrame implements ActionListener {
 
         if(action.getSource() == accept){
             //TODO - return a champion with the given fields
-            dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
+            if(isNumberic(strengthField.getText())) {
+                System.out.println("Accepted");
+                dispose();
+            }
 
+        }
+        if(action.getSource() == cancel){
+            System.out.println("Cancelled");
+            dispose();
         }
     }
 }
