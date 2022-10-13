@@ -11,6 +11,7 @@ public class Loader {
         try{
             FileInputStream fileIn = new FileInputStream(PATH);
         } catch (FileNotFoundException fnfe){
+            fnfe.printStackTrace();
             return false;
         }
     return true;

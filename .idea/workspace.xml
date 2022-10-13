@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7df7ed5-8ae4-4f65-98b1-9a6fd054a908" name="Changes" comment="Beginning of verification for champ creation">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/OptionSelector.java" afterDir="false" />
+    <list default="true" id="e7df7ed5-8ae4-4f65-98b1-9a6fd054a908" name="Changes" comment="Clicking changed to anonymous functions and JFrame is being initialized instead of inherited.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ChampCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ChampCreate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Loader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RPG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/RPG.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665675582233</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Clicking changed to anonymous functions and JFrame is being initialized instead of inherited.">
+      <created>1665693383881</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665693383881</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -96,6 +104,7 @@
     <MESSAGE value="Clickable buttons" />
     <MESSAGE value="Champion creation GUI" />
     <MESSAGE value="Beginning of verification for champ creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Beginning of verification for champ creation" />
+    <MESSAGE value="Clicking changed to anonymous functions and JFrame is being initialized instead of inherited." />
+    <option name="LAST_COMMIT_MESSAGE" value="Clicking changed to anonymous functions and JFrame is being initialized instead of inherited." />
   </component>
 </project>

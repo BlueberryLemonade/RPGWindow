@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
-public class ChampCreate extends JFrame implements ActionListener {
+public class ChampCreate{
 
     private String name;
     private int strength;
@@ -21,33 +21,46 @@ public class ChampCreate extends JFrame implements ActionListener {
 
     public ChampCreate(){
 
+        JFrame frame = new JFrame("Champion Creator");
+        JPanel panel = new JPanel();
+
         //Creating the GUI
-        super("Champion Creation");
-        setSize(400,500);
-        setLayout(new FlowLayout());
+        panel.setSize(400,500);
+        panel.setLayout(new FlowLayout());
 
         //Instantiating GUI elements
         nameLabel = new Label("Name: ");
         strengthLabel = new Label("Strength: ");
         nameField = new TextField(14);
         strengthField = new TextField(2);
+        nameField.setMaximumSize(new Dimension(100,300));
         accept = new Button("Accept");
         cancel = new Button("Cancel");
-        accept.addActionListener(this);
-        cancel.addActionListener(this);
+        accept.addActionListener(new ActionListener() {
+                                     @Override
+                                     public void actionPerformed(ActionEvent e) {
+                                         if(!isNumberic(strengthField.getText())){
 
-        //Adding elements to GUI
-        add(nameLabel);
-        add(nameField);
-        add(strengthLabel);
-        add(strengthField);
-        add(accept);
-        add(cancel);
+                                         } else {
+                                             System.out.println("accepted");
+                                         }
+                                     }
+                                 });
 
+                //Adding elements to GUI
+                panel.add(nameLabel);
+        panel.add(nameField);
+        panel.add(strengthLabel);
+        panel.add(strengthField);
+        panel.add(accept);
+        panel.add(cancel);
+
+        frame.add(panel);
         //Final GUI settings
-        setLocation(400, 500);
-        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        setVisible(true);
+        frame.setLocation(800, 300);
+        frame.setSize(400, 650);
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        frame.setVisible(true);
 
     }
 
@@ -61,22 +74,5 @@ public class ChampCreate extends JFrame implements ActionListener {
             return false;
         }
 
-    }
-
-
-    public void actionPerformed(ActionEvent action){
-
-        if(action.getSource() == accept){
-            //TODO - return a champion with the given fields
-            if(isNumberic(strengthField.getText())) {
-                System.out.println("Accepted");
-                dispose();
-            }
-
-        }
-        if(action.getSource() == cancel){
-            System.out.println("Cancelled");
-            dispose();
-        }
     }
 }
