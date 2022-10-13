@@ -59,6 +59,13 @@ public class RPG extends JFrame implements ActionListener {
         if(action.getSource() == play ){
             //TODO - write play command
             System.out.println("Play Clicked");
+            Loader load = new Loader();
+            if(!load.usernameLoad()){
+                System.out.println("CREATE A NEW CHAMPION");
+                ChampCreate creator = new ChampCreate();
+
+            }
+
         }
         if(action.getSource() == quit){
             dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
