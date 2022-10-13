@@ -14,6 +14,8 @@ public class FrameBuilder {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println(button.getText() + " button clicked");
+                ClickHandler click = new ClickHandler();
+                click.selection(button.getText());
             }
         });
 

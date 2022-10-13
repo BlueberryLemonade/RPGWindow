@@ -35,15 +35,13 @@ public class ChampCreate{
         strengthField = new TextField(2);
         nameField.setMaximumSize(new Dimension(100,300));
 
-        cancel = new Button("Cancel");
 
         panel.add(nameField);
         panel.add(strengthLabel);
         panel.add(strengthField);
         FrameBuilder builder = new FrameBuilder();
         builder.addAButton("Accept", panel);
-
-        panel.add(cancel);
+        builder.addAButton("Cancel", panel);
 
         frame.add(panel);
         //Final GUI settings
