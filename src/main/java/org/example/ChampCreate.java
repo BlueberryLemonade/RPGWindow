@@ -2,6 +2,8 @@ package org.example;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ChampCreate{
 
@@ -16,7 +18,8 @@ public class ChampCreate{
     private JButton accept;
     private JButton cancel;
 
-    private DefaultListModel<String> championList;
+    private DefaultListModel<String> listModel;
+    private ArrayList<Champion> championList;
     private JList<String> champJList;
 
 
@@ -24,6 +27,7 @@ public class ChampCreate{
     public void createGUI(){
         JFrame frame = new JFrame("Champion Creator");
         JPanel panel = new JPanel();
+
 
         //Creating the GUI
         panel.setSize(400,500);
@@ -35,7 +39,8 @@ public class ChampCreate{
         nameField = new TextField(14);
         strengthField = new TextField(2);
         nameField.setMaximumSize(new Dimension(100,300));
-        championList = new DefaultListModel<>();
+        championList = new ArrayList<>();
+        listModel = new DefaultListModel<>();
 
         panel.add(nameLabel);
         panel.add(nameField);
@@ -47,16 +52,30 @@ public class ChampCreate{
         accept.addActionListener(e -> {
             if(validityTest()){
                 System.out.println("Valid");
-                championList.addElement(createChampion().getName());
+
+                Champion createdChamp = createChampion();
+                listModel.addElement(createdChamp.getName());
+                championList.add(createdChamp);
             }
         });
 
         panel.add(accept);
-        if(championList != null) {
-            champJList = new JList<>(championList);
-            panel.add(champJList);
+        //If there is a champion list, fill the JList with the names of the champions
+        if(championList != null && championList.size() > 0) {
+
+            String[] listOfChampions = new String[championList.size()];
+
+
+            for(int i=0; i<championList.size(); i++){
+                Champion champ = championList.get(i);
+                listOfChampions[i] = champ.getName();
+            }
+
+
         }
 
+        champJList = new JList<>(listModel);
+        panel.add(champJList);
         frame.add(panel);
         //Final GUI settings
         frame.setLocation(800, 300);
@@ -85,6 +104,13 @@ public class ChampCreate{
             return true;
         } else {
             return false;
+        }
+    }
+
+    private void updateList(){
+        System.out.println(championList.size());
+        for(int i=0; i<championList.size(); i++){
+
         }
     }
 
