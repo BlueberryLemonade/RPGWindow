@@ -2,6 +2,8 @@ package org.example;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -17,6 +19,7 @@ public class ChampCreate{
 
     private JButton accept;
     private JButton cancel;
+    private JButton save;
 
     private DefaultListModel<String> listModel;
     private ArrayList<Champion> championList;
@@ -42,13 +45,14 @@ public class ChampCreate{
         championList = new ArrayList<>();
         listModel = new DefaultListModel<>();
 
+        //Adding all the elements to the pannel
         panel.add(nameLabel);
         panel.add(nameField);
         panel.add(strengthLabel);
         panel.add(strengthField);
 
+        //Creating Buttons and Listeners to go with them
         accept = new JButton("Accept");
-
         accept.addActionListener(e -> {
             if(validityTest()){
                 System.out.println("Valid");
@@ -59,7 +63,18 @@ public class ChampCreate{
             }
         });
 
+        save = new JButton("Save");
+        save.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FileManager filer = new FileManager();
+                filer.writeString();
+            }
+        });
+
         panel.add(accept);
+        panel.add(save);
+
         //If there is a champion list, fill the JList with the names of the champions
         if(championList != null && championList.size() > 0) {
 
@@ -82,6 +97,7 @@ public class ChampCreate{
         frame.setSize(400, 650);
         frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.setVisible(true);
+
     }
 
     public Champion createChampion(){
