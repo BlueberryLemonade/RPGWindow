@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7df7ed5-8ae4-4f65-98b1-9a6fd054a908" name="Changes" comment="Added utilities class for checking">
+    <list default="true" id="e7df7ed5-8ae4-4f65-98b1-9a6fd054a908" name="Changes" comment="successful creatures are added to the list">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ChampCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ChampCreate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RPG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/RPG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Utilities.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665709589632</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="successful creatures are added to the list">
+      <created>1665710840801</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1665710840801</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,6 +143,18 @@
     <MESSAGE value="Created a frame builder for adding buttons with anonymous functions" />
     <MESSAGE value="Created a click handler to handle the clicks." />
     <MESSAGE value="Added utilities class for checking" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added utilities class for checking" />
+    <MESSAGE value="successful creatures are added to the list" />
+    <option name="LAST_COMMIT_MESSAGE" value="successful creatures are added to the list" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/ChampCreate.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -2,9 +2,6 @@ package org.example;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
 
 public class ChampCreate{
 
@@ -23,15 +20,6 @@ public class ChampCreate{
     private JList<String> champJList;
 
 
-    private boolean isNumberic(String str){
-        try {
-            Integer.parseInt(str);
-            return true;
-        } catch(NumberFormatException nfe){
-            System.out.println("Must have a number in the strength field");
-            return false;
-        }
-    }
 
     public void createGUI(){
         JFrame frame = new JFrame("Champion Creator");
@@ -81,7 +69,7 @@ public class ChampCreate{
 
         int strength;
         String name = nameField.getText();
-        if(isNumberic(strengthField.getText())){
+        if(Utilities.isInteger(strengthField.getText())){
             strength = Integer.parseInt(strengthField.getText());
         } else {
             strength = 1;
@@ -93,7 +81,11 @@ public class ChampCreate{
     }
 
     private boolean validityTest(){
-        return Utilities.isInteger(strengthField.getText());
+        if(Utilities.isInteger(strengthField.getText()) && Utilities.isValidStringWithSpaces(nameField.getText())){
+            return true;
+        } else {
+            return false;
+        }
     }
 
 
