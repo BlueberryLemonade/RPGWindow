@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -22,7 +23,9 @@ public class ChampCreate{
     private JButton save;
 
     private DefaultListModel<String> listModel;
-    private ArrayList<Champion> championList;
+    private ArrayList<Externalizable> championList;
+    private ArrayList<Externalizable> champDatabase;
+    private ArrayList<Champion> availableChampion;
     private JList<String> champJList;
 
 
@@ -32,6 +35,7 @@ public class ChampCreate{
         JPanel panel = new JPanel();
 
 
+        readEnemies();
         //Creating the GUI
         panel.setSize(400,500);
         panel.setLayout(new FlowLayout());
@@ -67,8 +71,8 @@ public class ChampCreate{
         save.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FileManager filer = new FileManager();
-                filer.saveChamps(championList, "champions");
+
+                Utilities.saveData(championList, "champs");
             }
         });
 
@@ -81,9 +85,8 @@ public class ChampCreate{
             String[] listOfChampions = new String[championList.size()];
 
 
+
             for(int i = 0; i<championList.size(); i++){
-                Champion champ = championList.get(i);
-                listOfChampions[i] = champ.getName();
             }
 
 
@@ -123,11 +126,12 @@ public class ChampCreate{
         }
     }
 
-    private void updateList(){
-        System.out.println(championList.size());
-        for(int i=0; i<championList.size(); i++){
+    private void readEnemies(){
 
-        }
+       Utilities.fileExists("enemies");
+
+
+
     }
 
 

@@ -19,7 +19,7 @@ public class Champion implements Externalizable {
     }
 
     @Override
-    public void readExternal(ObjectInput in) throws  IOException, ClassNotFoundException{
+    public void readExternal(ObjectInput in) throws  IOException{
         this.name = in.readUTF();
         this.strength = in.readInt();
     }

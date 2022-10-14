@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7df7ed5-8ae4-4f65-98b1-9a6fd054a908" name="Changes" comment="Updated save to save objects">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/UtilitiesTest.java" afterDir="false" />
+    <list default="true" id="e7df7ed5-8ae4-4f65-98b1-9a6fd054a908" name="Changes" comment="Added unit testing to utilities class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ChampCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ChampCreate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Champion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Champion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Utilities.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +57,22 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UtilitiesTest">
+  <component name="RunManager">
+    <configuration name="ChampCreateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RPGWindow" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.ChampCreateTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tests" type="JUnit" factoryName="JUnit">
       <module name="RPGWindow" />
       <option name="METHOD_NAME" value="" />
@@ -100,11 +114,13 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.Tests" />
+      <item itemvalue="JUnit.ChampCreateTest" />
       <item itemvalue="JUnit.UtilitiesTest" />
       <item itemvalue="JUnit.UtilitiesTest.isInteger" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ChampCreateTest" />
         <item itemvalue="JUnit.UtilitiesTest" />
         <item itemvalue="JUnit.UtilitiesTest.isInteger" />
       </list>
@@ -217,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665762670946</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added unit testing to utilities class">
+      <created>1665781278277</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1665781278277</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -246,6 +269,23 @@
     <MESSAGE value="Improved list functionality by adding the objects to the list as well." />
     <MESSAGE value="Basic save functionality" />
     <MESSAGE value="Updated save to save objects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated save to save objects" />
+    <MESSAGE value="Added unit testing to utilities class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added unit testing to utilities class" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/UtilitiesTest.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Utilities.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
