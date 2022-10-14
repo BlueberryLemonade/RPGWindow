@@ -13,11 +13,16 @@ public class RPG {
 
     public static void main(String[] args) {
         RPG game = new RPG();
-
+        game.start();
     }
 
-    public RPG(){
 
+
+    public void start(){
+        createGUI();
+    }
+
+    public void createGUI(){
         //Create and add the GUI pieces
         boxArea = new JFrame("RPG Window");
         boxArea.setLayout(new FlowLayout());
@@ -48,7 +53,5 @@ public class RPG {
         boxArea.setLocation(750,300);
         boxArea.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         boxArea.setVisible(true);
-
-
     }
 }

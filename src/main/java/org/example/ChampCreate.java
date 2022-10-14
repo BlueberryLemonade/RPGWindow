@@ -19,6 +19,9 @@ public class ChampCreate{
     private JButton accept;
     private JButton cancel;
 
+    private DefaultListModel<String> championList;
+    private JList<String> champJList;
+
 
     private boolean isNumberic(String str){
         try {
@@ -44,6 +47,7 @@ public class ChampCreate{
         nameField = new TextField(14);
         strengthField = new TextField(2);
         nameField.setMaximumSize(new Dimension(100,300));
+        championList = new DefaultListModel<>();
 
         panel.add(nameLabel);
         panel.add(nameField);
@@ -55,11 +59,15 @@ public class ChampCreate{
         accept.addActionListener(e -> {
             if(validityTest()){
                 System.out.println("Valid");
-                createChampion();
+                championList.addElement(createChampion().getName());
             }
         });
 
         panel.add(accept);
+        if(championList != null) {
+            champJList = new JList<>(championList);
+            panel.add(champJList);
+        }
 
         frame.add(panel);
         //Final GUI settings
