@@ -1,8 +1,8 @@
 package org.example;
 
-import java.io.Serializable;
+import java.io.*;
 
-public class Champion implements Serializable {
+public class Champion implements Externalizable {
 
     private String name;
     private int strength;
@@ -10,6 +10,18 @@ public class Champion implements Serializable {
     public Champion(String name, int strength){
         this.name = name;
         this.strength = strength;
+    }
+
+    @Override
+    public void writeExternal(ObjectOutput objOut) throws IOException {
+        objOut.writeUTF(name);
+        objOut.writeInt(strength);
+    }
+
+    @Override
+    public void readExternal(ObjectInput in) throws  IOException, ClassNotFoundException{
+        this.name = in.readUTF();
+        this.strength = in.readInt();
     }
 
     public int getStrength() {

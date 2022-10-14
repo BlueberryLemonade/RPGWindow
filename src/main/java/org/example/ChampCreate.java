@@ -81,7 +81,7 @@ public class ChampCreate{
             String[] listOfChampions = new String[championList.size()];
 
 
-            for(int i=0; i<championList.size(); i++){
+            for(int i = 0; i<championList.size(); i++){
                 Champion champ = championList.get(i);
                 listOfChampions[i] = champ.getName();
             }
