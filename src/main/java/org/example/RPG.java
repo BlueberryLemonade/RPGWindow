@@ -31,12 +31,15 @@ public class RPG {
         panel.add(entryGameText);
 
         //Adding anonymous functions to listen for events on buttons
-        FrameBuilder builder = new FrameBuilder();
-        builder.addAButton("Play", panel);
-        builder.addAButton("Quit", panel);
-        builder.addAButton("Dev Tools", panel);
+        play = new JButton("Play");
+        play.addActionListener(action -> {
+            ChampCreate creator = new ChampCreate();
+            creator.createGUI();
+        });
+        play.setAlignmentX(Component.CENTER_ALIGNMENT);
         //Adding the components to the frame itself
 
+        panel.add(play);
         boxArea.add(panel);
         boxArea.add(buttonPanel);
 

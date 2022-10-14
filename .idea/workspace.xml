@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7df7ed5-8ae4-4f65-98b1-9a6fd054a908" name="Changes" comment="Created a frame builder for adding buttons with anonymous functions">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ClickHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FrameBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FrameBuilder.java" afterDir="false" />
+    <list default="true" id="e7df7ed5-8ae4-4f65-98b1-9a6fd054a908" name="Changes" comment="Created a click handler to handle the clicks.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ChampCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ChampCreate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ClickHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FrameBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RPG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/RPG.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665697804059</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Created a click handler to handle the clicks.">
+      <created>1665698339682</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1665698339682</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -119,6 +130,7 @@
     <MESSAGE value="Clicking changed to anonymous functions and JFrame is being initialized instead of inherited." />
     <MESSAGE value="Removed the implements and extends from the Champ Create class" />
     <MESSAGE value="Created a frame builder for adding buttons with anonymous functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created a frame builder for adding buttons with anonymous functions" />
+    <MESSAGE value="Created a click handler to handle the clicks." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a click handler to handle the clicks." />
   </component>
 </project>
