@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7df7ed5-8ae4-4f65-98b1-9a6fd054a908" name="Changes" comment="Improved list functionality by adding the objects to the list as well.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/FileManager.java" afterDir="false" />
+    <list default="true" id="e7df7ed5-8ae4-4f65-98b1-9a6fd054a908" name="Changes" comment="Basic save functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ChampCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ChampCreate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +37,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Development/General/RPGWindow"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -133,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665728927625</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Basic save functionality">
+      <created>1665733160470</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1665733160470</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,6 +168,7 @@
     <MESSAGE value="successful creatures are added to the list" />
     <MESSAGE value="String verification" />
     <MESSAGE value="Improved list functionality by adding the objects to the list as well." />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved list functionality by adding the objects to the list as well." />
+    <MESSAGE value="Basic save functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic save functionality" />
   </component>
 </project>

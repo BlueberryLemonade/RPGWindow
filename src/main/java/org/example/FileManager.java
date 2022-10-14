@@ -1,26 +1,32 @@
 package org.example;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.Serializable;
+import java.io.*;
+import java.util.ArrayList;
 
 public class FileManager implements Serializable {
+    //TODO - write in code that creates a folder if a data folder doesnt exist in the sre
 
+    File directory = new File(".");
 
-    public void writeString(){
-        //TODO - write in code that creates a folder if a data folder doesnt exist in the sre
-        File directory = new File(".");
+    String PATH= directory.getAbsolutePath() + "/src/data/";
 
-        String PATH= directory.getAbsolutePath() + "/src/data/stringdata.txt";
-        String file = "Write this";
+    public void saveChamps(ArrayList<Champion> champions, String dataName){
+
+        PATH = PATH + dataName + ".bin";
 
         try{
-            FileWriter writer = new FileWriter(PATH);
 
-            writer.write(file);
+            File saveFile = new File(PATH);
+            FileOutputStream outStream = new FileOutputStream(saveFile);
+            ObjectOutputStream objStream = new ObjectOutputStream(outStream);
 
-            writer.flush();
-            writer.close();
+            for(Champion champ : champions) {
+                objStream.writeObject(champ);
+            }
+
+            objStream.flush();
+            objStream.close();
+
 
         }catch ( Exception ex){
             ex.printStackTrace();

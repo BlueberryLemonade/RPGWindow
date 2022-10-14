@@ -68,7 +68,7 @@ public class ChampCreate{
             @Override
             public void actionPerformed(ActionEvent e) {
                 FileManager filer = new FileManager();
-                filer.writeString();
+                filer.saveChamps(championList, "champions");
             }
         });
 
