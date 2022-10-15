@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7df7ed5-8ae4-4f65-98b1-9a6fd054a908" name="Changes" comment="refactored out utilities class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Savable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e7df7ed5-8ae4-4f65-98b1-9a6fd054a908" name="Changes" comment="refactored out the file builder, created a savable abstract class">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ChampCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ChampCreate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FileBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FileBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665794897772</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="refactored out the file builder, created a savable abstract class">
+      <created>1665797901489</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1665797901489</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -285,7 +289,8 @@
     <MESSAGE value="Added unit testing to utilities class" />
     <MESSAGE value="File verification and creation on empty files" />
     <MESSAGE value="refactored out utilities class" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored out utilities class" />
+    <MESSAGE value="refactored out the file builder, created a savable abstract class" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored out the file builder, created a savable abstract class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

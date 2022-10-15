@@ -106,6 +106,8 @@ public class ChampCreate implements Savable{
         panel.add(accept);
         panel.add(save);
 
+        //Checks for file
+        System.out.println(fileExists("champs"));
         //If there is a champion list, fill the JList with the names of the champions
         if(championList != null && championList.size() > 0) {
 
@@ -153,7 +155,6 @@ public class ChampCreate implements Savable{
 
     //TODO - turn readChamps into a database loader
     private void readChamps(){
-        FileBuilder builder = new FileBuilder();
         fileExists("champs");
     }
 
@@ -197,6 +198,7 @@ public class ChampCreate implements Savable{
 
         String magicPath = pathGenerator(path);
 
+        System.out.println(magicPath);
         try{
             FileInputStream fileInput = new FileInputStream(magicPath);
         } catch(FileNotFoundException fnfe){
