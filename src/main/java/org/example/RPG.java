@@ -38,8 +38,8 @@ public class RPG {
         //Adding anonymous functions to listen for events on buttons
         play = new JButton("Play");
         play.addActionListener(action -> {
-            ChampCreate creator = new ChampCreate();
-            creator.createGUI();
+            ChampionController controller = new ChampionController();
+            controller.openChampCreation();
         });
         play.setAlignmentX(Component.CENTER_ALIGNMENT);
         //Adding the components to the frame itself

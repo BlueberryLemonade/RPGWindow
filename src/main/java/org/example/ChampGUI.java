@@ -6,9 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collection;
 
-public class ChampCreate {
+public class ChampGUI {
 
     private String name;
     private int strength;

@@ -52,6 +52,11 @@ public class ChampionController implements Savable {
         }
     }
 
+    public void openChampCreation(){
+        ChampGUI championCreation = new ChampGUI();
+        championCreation.createGUI();
+    }
+
 
     /*----------------------------------------------------LOGIC------------------------------------------*/
     // Logic handlers for the class

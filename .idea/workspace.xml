@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7df7ed5-8ae4-4f65-98b1-9a6fd054a908" name="Changes" comment="Housekeeping">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ChampionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ChampCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ChampCreate.java" afterDir="false" />
+    <list default="true" id="e7df7ed5-8ae4-4f65-98b1-9a6fd054a908" name="Changes" comment="seperated the champion logic from the GUI">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ChampCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ChampGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ChampionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ChampionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RPG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/RPG.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665798893153</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="seperated the champion logic from the GUI">
+      <created>1665803315347</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1665803315347</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -326,7 +333,8 @@
     <MESSAGE value="refactored out the file builder, created a savable abstract class" />
     <MESSAGE value="Bug fixes" />
     <MESSAGE value="Housekeeping" />
-    <option name="LAST_COMMIT_MESSAGE" value="Housekeeping" />
+    <MESSAGE value="seperated the champion logic from the GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="seperated the champion logic from the GUI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -338,11 +346,11 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/ChampionController.java</url>
-          <line>93</line>
+          <line>98</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/ChampCreate.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/ChampGUI.java</url>
           <line>64</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
