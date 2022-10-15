@@ -7,6 +7,9 @@ public class Champion implements Externalizable {
     private String name;
     private int strength;
 
+    public Champion(){
+
+    }
     public Champion(String name, int strength){
         this.name = name;
         this.strength = strength;
