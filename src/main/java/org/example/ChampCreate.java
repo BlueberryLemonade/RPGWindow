@@ -71,8 +71,8 @@ public class ChampCreate{
         save.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                Utilities.saveData(championList, "champs");
+                FileBuilder builder = new FileBuilder();
+                builder.saveData(championList, "champs");
             }
         });
 
@@ -107,7 +107,7 @@ public class ChampCreate{
 
         int strength;
         String name = nameField.getText();
-        if(Utilities.isInteger(strengthField.getText())){
+        if(isInteger(strengthField.getText())){
             strength = Integer.parseInt(strengthField.getText());
         } else {
             strength = 1;
@@ -119,7 +119,7 @@ public class ChampCreate{
     }
 
     private boolean validityTest(){
-        if(Utilities.isInteger(strengthField.getText()) && Utilities.isValidStringWithSpaces(nameField.getText())){
+        if(isInteger(strengthField.getText()) && isValidStringWithSpaces(nameField.getText())){
             return true;
         } else {
             return false;
@@ -127,12 +127,43 @@ public class ChampCreate{
     }
 
     private void readEnemies(){
+        FileBuilder builder = new FileBuilder();
+        builder.fileExists("enemies");
+    }
 
-       Utilities.fileExists("enemies");
+    private boolean isInteger(String str) {
 
-
+        try {
+            Integer.parseInt(str);
+            return true;
+        } catch (NumberFormatException nfe) {
+            System.out.println("Not a valid integer");
+            return false;
+        }
 
     }
+
+    private boolean isValidStringWithSpaces(String str) {
+
+
+        //First checks for beginning or ending spaces
+
+        if (Character.isWhitespace(str.charAt(0))|| Character.isWhitespace(str.charAt(str.length() -1))) {
+
+            System.out.println("You can't have trailing or leading spaces");
+
+            return false;
+        }
+        for (int i = 0; i < str.length(); i++) {
+            if (!Character.isLetter(str.charAt(i)) && !Character.isSpaceChar(str.charAt(i)))  {
+                System.out.println("You have to have only letters or space in string");
+                return false;
+            }
+        }
+
+        return true;
+    }
+
 
 
 }
